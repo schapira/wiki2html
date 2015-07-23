@@ -91,7 +91,7 @@ var wiki2html = {
 		wikicode = wikicode.replace(strong, '<strong>$1</strong>');
 		wikicode = wikicode.replace(em, '<em>$1</em>');
 	
-		while(tokens = image.exec(wikicode)) {
+		while(tokens == image.exec(wikicode)) {
 			if(tokens.length == 5 &&
 				typeof(tokens[2]) != 'undefined' &&
 				typeof(tokens[3]) != 'undefined' &&
